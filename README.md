@@ -104,7 +104,7 @@ ORDER BY
     salary_year_avg DESC;
 ```
 
-![Top Skills](data_analysis_sql_project\assets\top_skills.png)
+![Top Skills](data_analysis_sql_project/assets/top_skills.png)
 
 The breakdown of the most demanded skills for the top 10 highest paying daa analyst jobs in 2023:
 - **SQL** is leading with a bold count of 8.
@@ -131,7 +131,7 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
-![In Demand Skills](data_analysis_sql_project\assets\in_demand_skills.png)
+![In Demand Skills](data_analysis_sql_project/assets/in_demand_skills.png)
 
 The breakdown of the most demanded skills for data analysts in 2023:
 - **SQL** and **Excel** remain fundamental, emphasizing the need for strong foundational skills in data processing and spreadsheet manipulation.
