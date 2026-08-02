@@ -220,3 +220,24 @@ ORDER BY events DESC;
 The breakdown of layoff severity distribution tiers:
 - Of the 221 events classified as severe **(50%+ layoffs)**, **52.5%** resulted in a complete shutdown, suggesting that once layoffs cross the halfway mark, companies are more than likely to fail in its entirety. 
 - Mild layoffs (less than 25%) outnumber complete shutdowns by nearly 9x, reinforcing the idea that for most companies, layoffs were a correction rather than a complete failure.
+
+# What I Learned
+Throughout this project, I strengthened several SQL skills and applications through learning more about the layoffs in specific industries and companies:
+- **Data Cleaning at Scale**: I learned to identify and remove true duplicates using window functions rather than performing manual inspection.
+- **Type Conversion & Standardization**: I was able to be more comfortable converting inconsistent text data into proper types, such as ```DATE``` and ```NUMERIC```, as well as resolving naming inconsistencies.
+- **Window Functions & CTEs**: Used```ROW_NUMBER()```, ```DENSE_RANK()```, and running totals with ```SUM() OVER()``` to answer more advanced questions.
+- **Self-Joins for Data Repair**: Used a self-join to fill in missing values from related rows.
+
+# Conclusions
+
+### Insights
+1. **Largest Layoff & Full Shutdowns**: The largest layoff by headcount **(Google, 12,000)** represented only **6%** of that company's workforce, while 116 companies laid off 100% of their staff. Raw numbers and severity do not represent the same story.
+2. **Companies with the Most Total Layoffs**: **Amazon**, **Google**, and **Meta** led total layoffs by company, with the top 10 dominated almost entirely by large, established tech firms, suggesting that scale and not company health, drove much of the volume.
+3. **Industries & Countries Hit Hardest**: The U.S. accounted for over 7x the layoffs of the next-highest country, while single companies like **Philips** disproportionately drove their totals, as geography was far more concentrated than industry.
+4. **Layoffs Over Time**: A short, but sharp COVID-19 driven spike in early 2020 was followed by a large wave from the middle of 2022 through early 2023, as January 2023 accounting for the single highest monthly total within the dataset.
+5. **Top Companies by Year**: The scale of the year's largest single-company layoff increased sharply each year, as **Amazon** was the only company to appear in the top 5 across back-to-back years. This suggests that even top-tier companies are not immune to repeated rounds of cuts.
+6. **Average Layoff Severity by Industry**: **Aerospace** had the highest average layoff severity **(57%)** despite not leading in total acount, proving that industries hit hardest by volume are not always hit severely proportionally wise.
+7. **Layoff Severity Distribution**: **65%** of all layoff events cut less than 25% of a company's workforce, and complete shutdowns were slightly more common than layoffs in the **50-99%** range, as it suggests that companies rarely survive once cuts become severe.
+
+### Closing Thoughts
+This project strengthened my SQL data cleaning and analytical skills, while providing a clearer picture of the scale and distribution of tech industry layoffs. The process reinforced how much upfront data cleaning shapes the reliability of any downstream analysis, particularly around how window functions and CTEs unlock more nuanced business questions than simple aggregations alone. Beyond the technical takeaways, this analysis reinforces the original goal behind the project: layoffs are not random or evenly distributed. They cluster by company, by industry, by geography, and by time. For job seekers, understanding these patterns doesn't eliminate risk, but it does turn an abstract fear into something measurable, which is a factor that can be weighed alongside salary, role, and growth potential when evaluating where to work next.
